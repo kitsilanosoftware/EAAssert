@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D0659AA8-5555-132C-4EF1-6B1F46177BC9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>EAAssert</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' " Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseDebugLibraries>True</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' " Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+    <UseDebugLibraries>False</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' " Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+    <Midl />
+    <ClCompile>
+      <AdditionalIncludeDirectories>"include";"..\EABase\include\Common";"$(VSInstallDir)\VC\ATLMFC\INCLUDE";"$(VSInstallDir)\VC\INCLUDE";"$(WindowsSDKDir)\include";"$(VSInstallDir)\SDK\v2.0\include";"$(VSInstallDir)\INCLUDE"</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>FALSE</BufferSecurityCheck>
+      <CompileAs>Default</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileOnly>TRUE</CompileOnly>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4986; 4987; 4574; 4365; 4061; 4062; 4100; 4324; 4619; 4514; 4640; 4668; 4710; 4711; 4738; 4820; 4826; 4819; 4826; 4692; 4746; 4350; </DisableSpecificWarnings>
+      <ExceptionHandling>FALSE</ExceptionHandling>
+      <ForceConformanceInForLoopScope>TRUE</ForceConformanceInForLoopScope>
+      <MinimalRebuild>FALSE</MinimalRebuild>
+      <MultiProcessorCompilation>TRUE</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CHAR16T;_CRT_SECURE_NO_WARNINGS;_DEBUG;_HAS_CPP0X=0;_HAS_EXCEPTIONS=0;_SECURE_SCL=1;_WIN32_IE=0x0502;_WIN32_WINNT=0x0502;EA_DEBUG;WIN32;WINVER=0x0502</PreprocessorDefinitions>
+      <ProcessorNumber>8</ProcessorNumber>
+      <ProgramDataBaseFileName>Debug\lib\EAAssert.pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>FALSE</RuntimeTypeInfo>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+      <TreatWarningAsError>FALSE</TreatWarningAsError>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>Debug\lib\EAAssert.lib</OutputFile>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+    </Lib>
+    <PreBuildEvent>
+      <Command>@if not exist "Debug\lib" mkdir "Debug\lib" &amp; SET ERRORLEVEL=0
+@if not exist "Debug\build\EAAssert" mkdir "Debug\build\EAAssert" &amp; SET ERRORLEVEL=0</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+    <OutDir>Debug\lib\</OutDir>
+    <IntDir>Debug\build\EAAssert\vstmp\</IntDir>
+    <TargetName>EAAssert</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' " Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+    <Midl />
+    <ClCompile>
+      <AdditionalIncludeDirectories>"include";"..\EABase\include\Common";"$(VSInstallDir)\VC\ATLMFC\INCLUDE";"$(VSInstallDir)\VC\INCLUDE";"$(WindowsSDKDir)\include";"$(VSInstallDir)\SDK\v2.0\include";"$(VSInstallDir)\INCLUDE"</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>FALSE</BufferSecurityCheck>
+      <CompileAs>Default</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileOnly>TRUE</CompileOnly>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4986; 4987; 4574; 4365; 4061; 4062; 4100; 4324; 4619; 4514; 4640; 4668; 4710; 4711; 4738; 4820; 4826; 4819; 4826; 4692; 4746; 4350; </DisableSpecificWarnings>
+      <ExceptionHandling>FALSE</ExceptionHandling>
+      <ForceConformanceInForLoopScope>TRUE</ForceConformanceInForLoopScope>
+      <MinimalRebuild>FALSE</MinimalRebuild>
+      <MultiProcessorCompilation>TRUE</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CHAR16T;_CRT_SECURE_NO_WARNINGS;_HAS_CPP0X=0;_HAS_EXCEPTIONS=0;_SECURE_SCL=0;_WIN32_IE=0x0502;_WIN32_WINNT=0x0502;NDEBUG;WIN32;WINVER=0x0502</PreprocessorDefinitions>
+      <ProcessorNumber>8</ProcessorNumber>
+      <ProgramDataBaseFileName>Release\lib\EAAssert.pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>FALSE</RuntimeTypeInfo>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+      <TreatWarningAsError>FALSE</TreatWarningAsError>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>Release\lib\EAAssert.lib</OutputFile>
+      <SuppressStartupBanner>TRUE</SuppressStartupBanner>
+    </Lib>
+    <PreBuildEvent>
+      <Command>@if not exist "Release\lib" mkdir "Release\lib" &amp; SET ERRORLEVEL=0
+@if not exist "Release\build\EAAssert" mkdir "Release\build\EAAssert" &amp; SET ERRORLEVEL=0</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+    <OutDir>Release\lib\</OutDir>
+    <IntDir>Release\build\EAAssert\vstmp\</IntDir>
+    <TargetName>EAAssert</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="include\EAAssert\eaassert.h" />
+    <ClCompile Include="source\eaassert.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties platform_Debug_Win32="vc" vc-compiler="$(VSInstallDir)\VC\BIN\cl.exe" vc-compiler_clang="" vc-asm="$(VSInstallDir)\VC\BIN\ml.exe" vc-librarian="$(VSInstallDir)\VC\BIN\lib.exe" platform_Release_Win32="vc" build.env.PATH="$(VSInstallDir)\Common7\IDE"></UserProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
