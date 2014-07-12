@@ -11,3 +11,14 @@ meeting the bare-bones legal and technical requirement to get EAWebKit buildable
 See http://bobsummerwill.wordpress.com/2014/06/25/ea-open-source-software/.
 
 Bob Summerwill, Kitsilano Software, July 2014.
+
+Dependencies
+=============
+This package depends on the following pacakges:
+
+- [EABase](https://github.com/kitsilanosoftware/EABase "EABase"): git@github.com:kitsilanosoftware/EABase.git
+
+
+Building
+=============
+Place this package and all its dependencies in the same folder and use MSBuild or Visual Studio to build. 
