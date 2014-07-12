@@ -16,7 +16,7 @@ Dependencies
 =============
 This package depends on the following pacakges:
 
-- [EABase](https://github.com/kitsilanosoftware/EABase "EABase"): git@github.com:kitsilanosoftware/EABase.git
+- [EABase](https://github.com/kitsilanosoftware/EABase "EABase") located at [git@github.com:kitsilanosoftware/EABase.git](git@github.com:kitsilanosoftware/EABase.git "git@github.com:kitsilanosoftware/EABase.git")
 
 
 Building
